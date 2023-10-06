@@ -21,8 +21,10 @@ data1 <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
 plastic_data_all <- data1
 plastic_data_all %>% head(n = 10)
 # Member 2 write code to load File 2 data here:
-
-
+data2 <- read_csv2("data/per-capita-ocean-plastic-waste.txt")
+plastic_data_all <- data2 %>%
+  select(-name) %>%
+  left_join(plastic_data_all, by = "code")
 
 # Member 3 write code to load File 3 data here:
 
