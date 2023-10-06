@@ -104,7 +104,6 @@ plastic_data_all %>%
 # Write your code here to answer exercise 3
 
 
-
 ```
 
 
