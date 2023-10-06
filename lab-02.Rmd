@@ -89,12 +89,42 @@ arrange((plastic_data_all %>%
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
-plastic_data_all %>% 
+Africa <- plastic_data_all %>% 
   mutate(total_mismanage_plastic = mismanaged_plastic*population) %>%
   filter(region == "Africa") %>%
   select(total_mismanage_plastic) %>%
   unlist() %>%
   mean(na.rm = TRUE)
+
+Asia <- plastic_data_all %>% 
+  mutate(total_mismanage_plastic = mismanaged_plastic*population) %>%
+  filter(region == "Asia") %>%
+  select(total_mismanage_plastic) %>%
+  unlist() %>%
+  mean(na.rm = TRUE)
+
+Europe <- plastic_data_all %>% 
+  mutate(total_mismanage_plastic = mismanaged_plastic*population) %>%
+  filter(region == "Europe") %>%
+  select(total_mismanage_plastic) %>%
+  unlist() %>%
+  mean(na.rm = TRUE)
+
+Latin_America_and_The_Caribbean <- plastic_data_all %>% 
+  mutate(total_mismanage_plastic = mismanaged_plastic*population) %>%
+  filter(region == "Latin America and The Caribbean") %>%
+  select(total_mismanage_plastic) %>%
+  unlist() %>%
+  mean(na.rm = TRUE)
+
+Oceania<- plastic_data_all %>% 
+  mutate(total_mismanage_plastic = mismanaged_plastic*population) %>%
+  filter(region == "Oceania") %>%
+  select(total_mismanage_plastic) %>%
+  unlist() %>%
+  mean(na.rm = TRUE)
+
+
 ```
 
 
