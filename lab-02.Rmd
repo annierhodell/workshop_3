@@ -22,14 +22,11 @@ data1 <- read_csv("data/mismanaged-plastic-waste-per-capita.csv")
 # Member 2 write code to load File 2 data here:
 data2 <- read_csv2("data/per-capita-ocean-plastic-waste.txt")
 
-
 # Member 3 write code to load File 3 data here:
 data3 <- read_tsv("data/UN_country_population.tsv")
 
-
 # Member 4 write code to load File 4 data here:
 data4 <- read_excel("data/UN_country_region.xlsx")
-
 
 ```
 
@@ -75,9 +72,14 @@ plastic_data_all %>% head(n = 10)
 ### Ex 1.
 
 ```{r Ex1, message = FALSE}
-# Write your code here to answer exercise 1
+plastic_data_all %>%
+  group_by(region) %>%
+  count()
 
-
+arrange((plastic_data_all %>%
+  group_by(region) %>%
+  count()), 
+  desc(n))
 
 ```
 
