@@ -89,8 +89,8 @@ arrange((plastic_data_all %>%
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
-
-
+plastic_data_all %>%
+  mutate(total_mismange_plastic= mismanaged_plastic*population)
 
 ```
 
@@ -99,7 +99,6 @@ arrange((plastic_data_all %>%
 
 ```{r Ex3, message = FALSE}
 # Write your code here to answer exercise 3
-
 
 
 ```
