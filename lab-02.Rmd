@@ -80,7 +80,7 @@ arrange((plastic_data_all %>%
   group_by(region) %>%
   count()), 
   desc(n))
-
+#Africa has the most territories/countries
 ```
 
 
@@ -89,9 +89,12 @@ arrange((plastic_data_all %>%
 
 ```{r Ex2, message = FALSE}
 # Write your code here to answer exercise 2
-
-
-
+plastic_data_all %>% 
+  mutate(total_mismanage_plastic = mismanaged_plastic*population) %>%
+  filter(region == "Africa") %>%
+  select(total_mismanage_plastic) %>%
+  unlist() %>%
+  mean(na.rm = TRUE)
 ```
 
 
